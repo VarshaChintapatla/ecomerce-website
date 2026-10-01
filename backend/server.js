@@ -15,12 +15,20 @@ dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
 const app = express();
 
-const port = process.env.PORT || 4000;
-
 connectDB();
 connectCloudinary();
 
-app.use(cors());
+app.use(cors({
+    origin: [
+        "http://localhost:5173",
+        "http://localhost:5174",
+        "https://ecomerce-website-9mfa-6w8t1062l.vercel.app"
+    ],
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization", "token"]
+}));
+
 app.use(express.json());
 
 app.use("/api/user", userRouter);
@@ -32,6 +40,4 @@ app.get("/", (req, res) => {
     res.send("API Working");
 });
 
-app.listen(port, () => {
-    console.log(`Server started on PORT: ${port}`);
-});
+export default app;
