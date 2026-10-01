@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import { assets } from '../assets/assets'
-
-const backendUrl = "https://ecomerce-website-uju6.vercel.app/"
+import { backendUrl } from "../App";
 
 const Add = () => {
   const [image1, setImage1] = useState(false)
