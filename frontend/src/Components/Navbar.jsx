@@ -1,7 +1,10 @@
 
 import React, { useContext, useState } from "react";
+
 import { Link, NavLink } from "react-router-dom";
+
 import { assets } from "../assets/assets";
+
 import { ShopContext } from "../context/ShopContext";
 
 const Navbar = () => {
@@ -104,6 +107,7 @@ const Navbar = () => {
 
               <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded">
 
+                {/* My Profile */}
                 <p
                   onClick={() => navigate("/profile")}
                   className="cursor-pointer hover:text-black"
@@ -111,6 +115,7 @@ const Navbar = () => {
                   My Profile
                 </p>
 
+                {/* Orders */}
                 <p
                   onClick={() => navigate("/orders")}
                   className="cursor-pointer hover:text-black"
@@ -118,6 +123,17 @@ const Navbar = () => {
                   Orders
                 </p>
 
+                {/* Admin */}
+                <p
+                  onClick={() =>
+                    (window.location.href = "http://localhost:5174")
+                  }
+                  className="cursor-pointer hover:text-black"
+                >
+                  Admin
+                </p>
+
+                {/* Logout */}
                 <p
                   onClick={logout}
                   className="cursor-pointer hover:text-black"
@@ -176,7 +192,6 @@ const Navbar = () => {
               src={assets.dropdown_icon}
               alt="Back"
             />
-
             <p>Back</p>
           </div>
 
@@ -215,6 +230,17 @@ const Navbar = () => {
           >
             CONTACT
           </NavLink>
+
+          {/* Admin */}
+          <p
+            onClick={() => {
+              setVisible(false);
+              window.location.href = "http://localhost:5174";
+            }}
+            className="py-2 pl-6 border cursor-pointer"
+          >
+            ADMIN
+          </p>
 
         </div>
 
