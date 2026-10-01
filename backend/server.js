@@ -20,6 +20,7 @@ connectCloudinary();
 
 app.use(cors({
     origin: [
+        "https://ecomerce-website-frontend-eight.vercel.app",
         "https://ecomerce-website-9mfa.vercel.app",
     ],
     credentials: true,
