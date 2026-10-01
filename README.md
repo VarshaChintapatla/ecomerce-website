@@ -37,7 +37,8 @@ It allows users to browse, search, and filter products, manage their cart, place
 
 ## 💫 Live Demo
 
-**Coming soon**
+**Experience the live version here:**<br><br>
+[![Live Demo](https://img.shields.io/badge/LIVE-DEMO-green?style=for-the-badge)](https://ecomerce-website-frontend-eight.vercel.app)
 
 ---
 
