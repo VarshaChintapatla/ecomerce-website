@@ -1,0 +1,38 @@
+import jwt from "jsonwebtoken";
+
+const adminAuth = (req, res, next) => {
+    try {
+        const token = req.headers.token;
+
+        if (!token) {
+            return res.json({
+                success: false,
+                message: "Not Authorized Login Again"
+            });
+        }
+
+        const decoded = jwt.verify(
+            token,
+            process.env.JWT_SECRET
+        );
+
+        if (decoded.email !== process.env.ADMIN_EMAIL) {
+            return res.json({
+                success: false,
+                message: "Not Authorized Login Again"
+            });
+        }
+
+        next();
+
+    } catch (error) {
+        console.log("Admin Auth Error:", error.message);
+
+        return res.json({
+            success: false,
+            message: "Not Authorized Login Again"
+        });
+    }
+};
+
+export default adminAuth;
