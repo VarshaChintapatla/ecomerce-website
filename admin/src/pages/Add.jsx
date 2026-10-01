@@ -3,7 +3,7 @@ import axios from 'axios'
 import { toast } from 'react-toastify'
 import { assets } from '../assets/assets'
 
-const backendUrl = "http://localhost:4000"
+const backendUrl = "https://ecomerce-website-uju6.vercel.app/"
 
 const Add = () => {
   const [image1, setImage1] = useState(false)
