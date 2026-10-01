@@ -126,7 +126,7 @@ const Navbar = () => {
                 {/* Admin */}
                 <p
                   onClick={() =>
-                    (window.location.href = "http://localhost:5174")
+                    (window.location.href = import.meta.env.VITE_ADMIN_URL)
                   }
                   className="cursor-pointer hover:text-black"
                 >
