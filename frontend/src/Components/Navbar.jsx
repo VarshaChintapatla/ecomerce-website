@@ -235,7 +235,7 @@ const Navbar = () => {
           <p
             onClick={() => {
               setVisible(false);
-              window.location.href = "http://localhost:5174";
+             (window.location.href = import.meta.env.VITE_ADMIN_URL)
             }}
             className="py-2 pl-6 border cursor-pointer"
           >

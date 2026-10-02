@@ -11,11 +11,9 @@ import Cart from "./Pages/Cart";
 import PlaceOrder from "./Pages/PlaceOrder";
 import Login from "./Pages/Login";
 import Orders from "./Pages/Orders";
-
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import SearchBar from "./Components/SearchBar";
-
 import Verify from "./Pages/Verify";
 
 import { ToastContainer } from "react-toastify";
